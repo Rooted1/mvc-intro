@@ -1,0 +1,8 @@
+<!-- list all airlines on a new line display airline in a new browser tab when clicked -->
+<ul>
+  <% Airline.all.each do |airline|%>
+    <li>
+      <a href="/get_airline/<%= airline.id%>" target="_blank"><%= airline.name %></a>
+    </li>
+  <% end%>
+</ul>

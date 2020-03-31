@@ -1,0 +1,18 @@
+<!-- display airline name -->
+<h1>
+  <a> <%= @airline.name%> </a>
+</h1>
+
+<!-- list all tickets under a single airline -->
+<ul>
+  <% @airline.tickets.each do |ticket|%>
+    <li>
+      <%= "#{ticket.departure_city} - #{ticket.destination_city}" %>
+    </li>
+  <% end%>
+</ul>
+
+<!-- click button to delete an airline  -->
+<a href="/get_airline/<%= @airline.destroy()%>">
+  <button type="button">Delete Airline</button>
+</a>
